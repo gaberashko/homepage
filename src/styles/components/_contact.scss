@@ -1,0 +1,42 @@
+
+$s-marg: 4px;
+$m-marg: 8px;
+$l-marg: 16px;
+$xl-marg: 32px;
+$contact-gap: 24px;
+
+:root {
+    --icon-size: 30px;
+}
+
+.icon_contacts, .text_contacts, .physical_contacts {
+        margin-top: $l-marg;
+}
+
+.icon_contacts {
+    display: flex;
+    gap: $contact-gap;
+}
+
+.icon_contact {
+    display: block;
+    width:fit-content;
+
+    img {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+}
+
+
+.text_contact {
+    display: block;
+
+    * {
+        vertical-align: middle;
+    }
+    img {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+}

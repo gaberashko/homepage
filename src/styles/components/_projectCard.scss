@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+// Sizes
+$s-icon: 25px;
+$m-icon: 35px;
+$l-icon: 45px;
+
+$card-w-min: 200px;
+$card-w-max: 270px;
+$card-h-min: 450px;
+
+$col-count: 3;
+$col-gap: $m-pd;
+$grid-width: calc($col-count * ($card-w-max + $col-gap));
+
+
+#project_grid {
+    gap: $col-gap;
+    grid-template: 1fr / repeat(auto-fill, minmax($card-w-min, $card-w-max));
+}
+
+.project_card {
+    max-width: $card-w-max;
+    min-height:$card-h-min;
+    overflow: hidden;
+    border: $brdprim;
+    border-radius: $brd-r;
+    text-overflow:ellipsis;
+
+    & img {
+        display: block;
+    }
+}
+
+.project_image {
+    min-height: 200px;
+    height: 250px;
+    width:100%;
+    object-fit:fill;
+}
+
+.project_content {
+    @include responsive(padding, (xs: $xs-pd $xs-pd, sm: $xs-pd $s-pd));
+}
+
+.project_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $s-pd;
+    text-wrap:nowrap;
+}
+
+.project_links {
+    gap:$xs-pd;
+}
+
+
+.project_icon {
+    position: relative;
+    inset: 0 0;
+    @include responsive(width, (xs: $s-icon));
+    @include responsive(height, (xs: $s-icon));
+}
+
+@media screen and (max-width:600px) {
+    #project_grid {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #project_grid {
+        width:fit-content;
+        grid-template: 1fr / repeat(2, minmax($card-w-min, $card-w-max));
+    }
+}

@@ -2,16 +2,30 @@
 // COLORS
 // ==========================
 // Theme colors
-$accentprim: #31df31;            // Primary accent
-$accentsec: #023a03;             // Secondary accent
-$bg-prim: #000b00;               // Primary theme background
-$bg-glassy: #11311d;             // Transparent background color
+$acc-100: #cfc9ee;
+$acc-200: #ada3e6;
+$acc-300: #9e93dc;
+$acc-400: #9489d4;
+$acc-500: #8679d0;
+$acc-600: #6553c6;
+$acc-700: #4832c4;
+$acc-800: #261876;
+$acc-900: #140c42;
+$offwhite: #dadade;               // Primary site background
+
+// Typography colors
+$fnt-dark: #111112;
+$fnt-light: #e3e3e5;
 
 
 // ==========================
 // EFFECTS & SHADOWS
 // ==========================
 
+// Transitions
+$hover-scale: 1.2; // Scale on hover
+$trans-d: 250ms; // Transition duration
+$trans-tf: cubic-bezier( 0.29, 0.00, 0.27, 1.00); // Transition timing function
 
 
 // ==========================
@@ -19,13 +33,26 @@ $bg-glassy: #11311d;             // Transparent background color
 // ==========================
 
 // Paddings / margins
-
+$xs-pd: 8px;
+$s-pd: 12px;
+$m-pd: 20px;
+$l-pd: 32px;
+$xl-pd: 48px;
+$xxl-pd: 64px;
 
 // Font sizes
+$xs-fnt: 0.8rem;
+$s-fnt: 1rem;
+$m-fnt: 1.4rem;
+$l-fnt: 1.8rem;
+$xl-fnt: 2rem;
+$xxl-fnt: 2.6rem;
 
 
-// Border widths
-
+// Border variables
+$brd-w: 2px; // Width
+$brd-r: 12px; // Radius
+$brdprim: $brd-w solid $acc-800; // Primary border
 
 // Breakpoints
 $breakpoints: (xs: 0, sm: 600px, md: 900px, lg:1200px, xl: 1850px);

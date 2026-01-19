@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+
+a, img {
+
+    &.hoverable {
+        will-change: transform;
+        transition: transform $trans-d $trans-tf;
+
+        &:hover {
+            transform:scale($hover-scale);
+            transition: transform $trans-d $trans-tf;
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display:grid;
+}
+
+.bg-dark{
+    background-color: $acc-900;
+}
+
+.text-light {
+    * {
+        color: $fnt-light;
+    }
+
+    [class*="icon"] img {
+        filter:brightness(0) invert(1);
+    }
+}
+
+.about_contact {
+    
+}

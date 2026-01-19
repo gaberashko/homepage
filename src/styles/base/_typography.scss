@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+
+* {
+    color:$fnt-dark;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+h1 {
+    font-size: $xxl-fnt;
+    margin-bottom: $s-pd;
+}
+
+h2 {
+    font-size: $xl-fnt;
+}
+
+h3 {
+    font-size: $l-fnt;
+}
+
+h4, h5 {
+    font-size: $m-fnt;
+}
+
+p {
+    font-size:$s-fnt;
+}
